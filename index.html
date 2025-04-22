@@ -36,7 +36,7 @@
   </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Gabriella Barreto</a>.
+    Coded by <a href="https://github.com/gasbibarreto">Gabriella Barreto</a>.
   </div>
   <script src="script.js"></script>
 </body>
@@ -162,25 +162,25 @@
   }
 
   .summary-item.reaction {
-    background-color: #ff575720;
+    background-color: color-mix(in srgb, #ff5757 8%, transparent);
     border: #ff5757;
     color: #ff5757;
   }
 
   .summary-item.memory {
-    background-color: #ffb01f20;
+    background-color: color-mix(in srgb, #ffb01f 8%, transparent);
     border: #ffb01f;
     color: #ffb01f;
   }
 
   .summary-item.verbal {
-    background-color: #00bd9120;
+    background-color: color-mix(in srgb, #00bd91 8%, transparent); /* 20% opacity */
     border: #00bd91;
     color: #00bd91;
   }
 
   .summary-item.visual {
-    background-color: #1125d620;
+    background-color: color-mix(in srgb, #1125d6 8%, transparent);
     border: #1125d6;
     color: #1125d6
   }
@@ -189,7 +189,6 @@
     display: flex;
     align-items: center;
     gap: 9px;
-    opacity: 0.6;
   }
 
   .category span {
@@ -220,8 +219,7 @@
     border-radius: 30px;
     width: 100%;
     padding: 15px;
-    font-size: small;
-    font-weight: bold;
+    font-size: 13px; 
   }
 
   button:hover {
@@ -274,13 +272,13 @@
     }
 
     .result h3 {
-      font-size: 24px;
+      font-size: 20px;
     }
 
     button {
       width: 100%;
       padding: 12px;
-      font-size: 16px;
+      font-size: small;
       margin-top: 16px;
     }
   }
