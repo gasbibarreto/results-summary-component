@@ -16,16 +16,18 @@
 
 <body>
   <div class="container">
-    <div class="result box">
+    <div class="result">
       <h1>Your Result</h1>
-      <h2>76</h2>
-      <h2>of 100</h2>
+      <div class="score-total">
+        <h2>76</h2>
+        <p>of 100</p>
+      </div>
 
-      <h2>Great</h2>
+      <h3>Great</h3>
       <p>You scored higher than 65% of the people who have taken these tests.</p>
     </div>
 
-    <div class="summary box">
+    <div class="summary">
       <h2>Summary</h2>
       <div id="summary-list"></div>
       <button>Continue</button>
@@ -49,45 +51,104 @@
 
   body {
     font-family: 'Hanken Grotesk', sans-serif;
-    background: #e2d5ff;
+    background: #d5deff;
+    margin: 0px;
+    padding: 0px;
   }
 
   .container {
     display: flex;
     justify-content: center;
+    align-items: stretch;
     gap: 20px;
-    margin: 10% 25% 10%;
+    max-width: 600px;
+    margin: 150px auto 60px;
+    padding: 40px 20px;
   }
 
-  .result {
-    flex: 1;
-    padding: 20px;
-    text-align: center;
-    color: #ffffff;
-    background-color: #9947f6;
-    margin-right: -10%;
-    z-index: 2;
-  }
-
+  .result,
   .summary {
-    flex: 1;
-    padding: 20px 20px 20px 80px;
-    background-color: #ffffff;
-    z-index: 1;
-  }
-
-  .box {
     border: 1px solid #ccc;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 400px;
+    padding: 20px;
+  }
+
+  .result {
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    color: #ffffff;
+    background-color: #3c49f3;
+    margin-right: -65px;
+    z-index: 2;
+  }
+
+  .result h1 {
+    font-size: 20px;
+    opacity: 0.6;
+  }
+
+  .result h3 {
+    font-size: 27px;
+    margin: 0;
+    padding-top: 10px;
+    font-weight: normal;
+  }
+
+  .result p {
+    font-size: 14px;
+    opacity: 0.6;
+    text-align: center;
+    max-width: 200px;
+    margin: 0 auto;
+    padding-top: 10px;
+  }
+
+  .score-total {
+    background: linear-gradient(to top, rgb(72, 78, 241), rgb(13, 43, 193));
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .score-total h2 {
+    font-size: 60px;
+    margin: 0;
+  }
+
+  .score-total p {
+    font-size: 13px;
+    font-weight: bold;
+    color: #ccc;
+    opacity: 0.6;
+    margin: 0;
+  }
+
+  .summary {
+    flex: 1;
+    background-color: #ffffff;
+    z-index: 1;
+    padding-left: 70px;
+  }
+
+  .summary h2 {
+    font-size: 20px;
+    color: #01285e;
   }
 
   #summary-list {
     display: flex;
     flex-direction: column;
-    padding-bottom: 5%;
-    gap: 8px;
+    padding-bottom: 30px;
+    gap: 18px;
   }
 
   .summary-item {
@@ -96,13 +157,43 @@
     justify-content: space-between;
     border: 1px solid #dfdede;
     padding: 8px;
-    border-radius: 6px;
+    border-radius: 8px;
+    font-weight: bold;
   }
 
-  .summary-item .left {
+  .summary-item.reaction {
+    background-color: #ff575720;
+    border: #ff5757;
+    color: #ff5757;
+  }
+
+  .summary-item.memory {
+    background-color: #ffb01f20;
+    border: #ffb01f;
+    color: #ffb01f;
+  }
+
+  .summary-item.verbal {
+    background-color: #00bd9120;
+    border: #00bd91;
+    color: #00bd91;
+  }
+
+  .summary-item.visual {
+    background-color: #1125d620;
+    border: #1125d6;
+    color: #1125d6
+  }
+
+  .category {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 9px;
+    opacity: 0.6;
+  }
+
+  .category span {
+    font-size: 15px;
   }
 
   .summary-item img {
@@ -110,14 +201,32 @@
     height: 24px;
   }
 
-  .summary-item .score {}
+  .summary-item .current {
+    color: #01285e;
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  .summary-item .total {
+    color: #01285e;
+    font-size: 13px;
+    opacity: 0.6;
+  }
 
   button {
     color: #ffffff;
-    background-color: #0b428f;
-    padding: 5% 43%;
+    background-color: #01285e;
     border: none;
     border-radius: 30px;
+    width: 100%;
+    padding: 15px;
+    font-size: small;
+    font-weight: bold;
+  }
+
+  button:hover {
+    background-color:  #0346a4;
+    color:white;
   }
 
   .attribution {
@@ -127,5 +236,50 @@
 
   .attribution a {
     color: hsl(228, 45%, 44%);
+  }
+
+  @media (max-width: 768px) {    
+    .container {
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+    }
+
+    .result,
+    .summary {
+      width: 100%;
+      margin: 0;
+    }
+
+    .result {
+      margin-bottom: -20%;
+      z-index: 2;
+    }
+
+    .summary {
+      padding: 20px;
+      z-index: 1;
+    }
+
+    .score-total {
+      width: 80px;
+      height: 80px;
+      padding: 20px;
+    }
+
+    .score-total h2 {
+      font-size: 40px;
+    }
+
+    .result h3 {
+      font-size: 24px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      margin-top: 16px;
+    }
   }
 </style>
