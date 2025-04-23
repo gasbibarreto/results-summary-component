@@ -51,7 +51,7 @@
 
   body {
     font-family: 'Hanken Grotesk', sans-serif;
-    background: #d5deff;
+    background: hsl(221, 100%, 96%);
     margin: 0px;
     padding: 0px;
   }
@@ -80,7 +80,7 @@
     text-align: center;
     justify-content: center;
     color: #ffffff;
-    background-color: #3c49f3;
+    background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
     margin-right: -65px;
     z-index: 2;
   }
@@ -107,7 +107,7 @@
   }
 
   .score-total {
-    background: linear-gradient(to top, rgb(72, 78, 241), rgb(13, 43, 193));
+    background: linear-gradient(to top, hsla(241, 72%, 46%, 0), hsla(256, 72%, 46%, 1));
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -134,14 +134,14 @@
 
   .summary {
     flex: 1;
-    background-color: #ffffff;
+    background: hsl(0, 0%, 100%);
     z-index: 1;
     padding-left: 70px;
   }
 
   .summary h2 {
     font-size: 20px;
-    color: #01285e;
+    color: hsl(224, 30%, 27%);
   }
 
   #summary-list {
@@ -162,27 +162,27 @@
   }
 
   .summary-item.reaction {
-    background-color: color-mix(in srgb, #ff5757 8%, transparent);
-    border: #ff5757;
-    color: #ff5757;
+    background-color: color-mix(in srgb, hsl(0, 100%, 67%) 8%, transparent);
+    border: hsl(0, 100%, 67%);
+    color: hsl(0, 100%, 67%);
   }
 
   .summary-item.memory {
-    background-color: color-mix(in srgb, #ffb01f 8%, transparent);
-    border: #ffb01f;
-    color: #ffb01f;
+    background-color: color-mix(in srgb, hsl(39, 100%, 56%) 8%, transparent);
+    border: hsl(39, 100%, 56%);
+    color: hsl(39, 100%, 56%);
   }
 
   .summary-item.verbal {
-    background-color: color-mix(in srgb, #00bd91 8%, transparent); /* 20% opacity */
-    border: #00bd91;
-    color: #00bd91;
+    background-color: color-mix(in srgb, hsl(166, 100%, 37%) 8%, transparent); /* 20% opacity */
+    border: hsl(166, 100%, 37%);
+    color: hsl(166, 100%, 37%);
   }
 
   .summary-item.visual {
-    background-color: color-mix(in srgb, #1125d6 8%, transparent);
-    border: #1125d6;
-    color: #1125d6
+    background-color: color-mix(in srgb, hsl(234, 85%, 45%) 8%, transparent);
+    border: hsl(234, 85%, 45%);
+    color: hsl(234, 85%, 45%);
   }
 
   .category {
@@ -214,7 +214,7 @@
 
   button {
     color: #ffffff;
-    background-color: #01285e;
+    background-color: hsl(224, 30%, 27%);
     border: none;
     border-radius: 30px;
     width: 100%;
