@@ -12,12 +12,13 @@ Users should be able to:
 
 ### Screenshot
 
-![Solution](/results-summary-component-main/design/mySolution.png)
+My solution
+
+![Solution](/design/mySolution.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://gasbibarreto.github.io/results-summary-component/)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution here](https://gasbibarreto.github.io/results-summary-component/)
 
 ## My process
 
