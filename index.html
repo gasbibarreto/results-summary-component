@@ -1,59 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+  <header>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <title>Frontend Mentor | Results summary component</title>
+  </header>
 
-  <title>Frontend Mentor | Results summary component</title>
+  <body>
+    <main class="container">
+      <div class="result">
+        <h1>Your Result</h1>
+        <div class="score-total">
+          <h2>76</h2>
+          <p>of 100</p>
+        </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style></style>
-</head>
-
-<body>
-  <div class="container">
-    <div class="result">
-      <h1>Your Result</h1>
-      <div class="score-total">
-        <h2>76</h2>
-        <p>of 100</p>
+        <h3>Great</h3>
+        <p>
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
       </div>
 
-      <h3>Great</h3>
-      <p>You scored higher than 65% of the people who have taken these tests.</p>
-    </div>
+      <div class="summary">
+        <h2>Summary</h2>
+        <div id="summary-list"></div>
+        <button>Continue</button>
+      </div>
+    </main>
 
-    <div class="summary">
-      <h2>Summary</h2>
-      <div id="summary-list"></div>
-      <button>Continue</button>
-    </div>
-
-  </div>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://github.com/gasbibarreto">Gabriella Barreto</a>.
-  </div>
-  <script src="script.js"></script>
-</body>
-
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/gasbibarreto">Gabriella Barreto</a>.
+     </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
 
 <style>
   @font-face {
-    font-family: 'Hanken Grotesk';
-    src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
+    font-family: "Hanken Grotesk";
+    src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf")
+      format("truetype");
   }
 
   body {
-    font-family: 'Hanken Grotesk', sans-serif;
+    font-family: "Hanken Grotesk", sans-serif;
     background: hsl(221, 100%, 96%);
     margin: 0px;
     padding: 0px;
+    display: flex; /*Make the body a flex container*/
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /*Center the content horizontally*/
+    align-items: center; /*Center the content vertically*/
+    min-height: 100vh; /*Make the body at least the height of the viewport*/
   }
 
   .container {
@@ -61,8 +69,8 @@
     justify-content: center;
     align-items: stretch;
     gap: 20px;
-    max-width: 600px;
-    margin: 100px auto 60px;
+    max-width: 00px;
+    margin: 0 auto; /* Center the container horizontally */
     padding: 40px 20px;
   }
 
@@ -80,7 +88,11 @@
     text-align: center;
     justify-content: center;
     color: #ffffff;
-    background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    background: linear-gradient(
+      to bottom,
+      hsl(252, 100%, 67%),
+      hsl(241, 81%, 54%)
+    );
     margin-right: -65px;
     z-index: 2;
   }
@@ -107,7 +119,11 @@
   }
 
   .score-total {
-    background: linear-gradient(to top, hsla(241, 72%, 46%, 0), hsla(256, 72%, 46%, 1));
+    background: linear-gradient(
+      to top,
+      hsla(241, 72%, 46%, 0),
+      hsla(256, 72%, 46%, 1)
+    );
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -174,7 +190,11 @@
   }
 
   .summary-item.verbal {
-    background-color: color-mix(in srgb, hsl(166, 100%, 37%) 8%, transparent); /* 20% opacity */
+    background-color: color-mix(
+      in srgb,
+      hsl(166, 100%, 37%) 8%,
+      transparent
+    ); /* 20% opacity */
     border: hsl(166, 100%, 37%);
     color: hsl(166, 100%, 37%);
   }
@@ -219,7 +239,7 @@
     border-radius: 30px;
     width: 100%;
     padding: 15px;
-    font-size: 13px; 
+    font-size: 13px;
   }
 
   button:hover {
@@ -229,17 +249,20 @@
   .attribution {
     font-size: 11px;
     text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
   }
 
   .attribution a {
     color: hsl(228, 45%, 44%);
   }
 
-  @media (max-width: 768px) {    
+  @media (max-width: 768px) {
     .container {
       flex-direction: column;
       align-items: center;
       margin: 0;
+      padding: 0;
     }
 
     .result,
